@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
 		String[] NM = br.readLine().split(" ");
 		int N = Integer.parseInt(NM[0]);
 		int M = Integer.parseInt(NM[1]);
@@ -24,8 +26,8 @@ public class Main {
 			int end = Integer.parseInt(section[1]);
 
 			// 출력
-			System.out.println(arrN[end] - arrN[start - 1]); 
+			sb.append((arrN[end] - arrN[start - 1]) + "\n"); 
 		} // 사실상 tc
-
+		System.out.println(sb);
 	}// main
 }
