@@ -11,18 +11,18 @@ public class Main {
 		int N = sc.nextInt();
 		int K = sc.nextInt();
 		
-		K = K % 10;
-		
 		List<Integer> list = new ArrayList<>();
 		
 		for (int i = 1; i <= N; i++) {
-			if ((i % 10) != K && (i % 10) != K * 2) {
+			if ((i % 10) != (K % 10) && (i % 10) != (K * 2) % 10) {
 				list.add(i);
 			}
 		}
 		sb.append(list.size() + "\n");
-		for(int num : list) {
-			sb.append(num + " ");
+		if (!list.isEmpty()) {			
+			for(int num : list) {
+				sb.append(num + " ");
+			}
 		}
 		
 		System.out.println(sb);
